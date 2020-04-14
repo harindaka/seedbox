@@ -1,0 +1,66 @@
+version: "2.1"
+services:
+  nginx:
+    image: linuxserver/nginx
+    container_name: nginx-container
+    environment:
+      - PUID=${g_uid}
+      - PGID=${g_gid}
+      - TZ=Europe/London
+    volumes:
+      - ${g_nginx_config_dir}:/config
+    expose:
+      - 4080
+      - 5080
+      - 6080
+    ports:
+      - 80:80
+      - 4080:4080
+      - 5080:5080
+      - 6080:6080      
+    restart: unless-stopped
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission-container
+    environment:
+      - PUID=${g_uid}
+      - PGID=${g_gid}
+      - TZ=Europe/London
+      - TRANSMISSION_WEB_HOME=/combustion-release/
+    volumes:
+      - ${g_transmission_config_dir}:/config
+      - ${g_transmission_downloads_dir}:/downloads
+      - ${g_transmission_watch_dir}:/watch
+    expose:
+      - 9091
+    ports:      
+      - 51413:51413
+      - 51413:51413/udp
+    restart: unless-stopped
+  jellyfin:
+    image: linuxserver/jellyfin
+    container_name: jellyfin-container
+    environment:
+      - PUID=${g_uid}
+      - PGID=${g_gid}
+      - TZ=Europe/London
+    volumes:
+      - ${g_jellyfin_config_dir}:/config
+      - ${g_transmission_downloads_dir}:/data/tvshows
+      - ${g_transmission_downloads_dir}:/data/movies
+    expose:
+      - 8096
+    restart: unless-stopped
+  commander:
+    image: coderaiser/cloudcmd
+    container_name: commander-container
+    working_dir: /mnt/fs
+    volumes:
+      - ${g_commander_config_dir}:/root
+      - ${g_transmission_downloads_dir}:/mnt/fs
+    expose:
+      - 8000    
+    restart: unless-stopped
+
+
+  

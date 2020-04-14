@@ -1,0 +1,101 @@
+    <html>
+        <head>
+            <title>Seedbox</title>
+            <style>
+            body{
+                background: #222;
+                text-align: center;
+                font-family: 'roboto', sans-serif;
+                padding-top: 20px;
+            }
+
+            h1{
+                color: white;
+                margin-bottom: 40px;
+            }
+
+            #wrapper{
+                display: block;
+                margin-bottom: 100px;
+            }
+
+            div{
+                width: auto;
+                height: 50px;
+            }
+
+            #madeby{
+                color: #666;
+                text-decoration: none;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            #madeby:after{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 100%;
+                top: 0;
+                right: 0;
+                padding-bottom: 5px;
+                border-bottom: 1.5px solid #777;
+                transition: color 0.3s ease;
+                transition: 0.3s width ease;
+            }
+            #madeby:hover:after{
+                left: 0;
+                width: 100%;
+                transition: 0.3s width ease;
+            }
+            #madeby:hover{
+                color: #777;
+                transition: color 0.3s ease;
+            }
+
+            .button{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                position: relative;
+                padding: 10px;
+            }
+
+            a.button.one:before, a.button.one:after{
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                transition: all 0.3s ease;
+            }
+            a.button.one:before{
+                top: -2.5%;
+                left: -1%;
+                border-top: 2px solid white;
+                border-left: 2px solid white;	
+            }
+            a.button.one:after{
+                bottom: -2.5%;
+                right: -1%;
+                border-bottom: 2px solid white;
+                border-right: 2px solid white;
+            }
+            a.button.one:hover:before, a.button.one:hover:after{
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s ease;
+            }
+            
+            </style>
+        </head>
+        <body>
+            <div>
+                <h1>Seedbox</h1>
+                <a class="button one" href="/" target="_blank" onclick="javascript:event.target.port=4080">Download</a>
+                <a class="button one" href="/" target="_blank" onclick="javascript:event.target.port=5080">Stream</a>
+                <a class="button one" href="/fs/mnt/fs/" target="_blank" onclick="javascript:event.target.port=6080">Browse</a>
+            </div>
+        </body>
+    </html>
