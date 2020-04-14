@@ -17,7 +17,7 @@ Tested on Ubuntu 18.04. Should work on any platform (Windows, MacOS, etc.) with 
 ## Prerequisites
 1. [Docker](https://docs.docker.com/get-docker/)
 2. [Docker Compose](https://docs.docker.com/compose/install/). You may run the included convenience script `./docker-compose-install.sh` to install Docker Compose in an Ubuntu based environment.
-3. A bash compatible shell to run the included convenience scripts (e.g. via Windows Subsystem for Linux)
+3. A bash compatible shell to run the included convenience scripts (e.g. via [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10))
 
 ## Setting Up
 1. Clone this repo
