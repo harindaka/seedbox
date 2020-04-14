@@ -15,8 +15,8 @@ A Docker Compose file and a collection of convenience scripts to easily setup a 
 Tested on Ubuntu 18.04. Should work on any platform (Windows, MacOS, etc.) with Docker and Docker Compose installed.
 
 ## Prerequisites
-1. Docker
-2. Docker Compose. You may run the included convenience script `./docker-compose-install.sh` to install Docker Compose in an Ubuntu based environment.
+1. [Docker](https://docs.docker.com/get-docker/)
+2. [Docker Compose](https://docs.docker.com/compose/install/). You may run the included convenience script `./docker-compose-install.sh` to install Docker Compose in an Ubuntu based environment.
 3. A bash compatible shell to run the included convenience scripts (e.g. via Windows Subsystem for Linux)
 
 ## Setting Up
