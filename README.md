@@ -2,6 +2,8 @@
 
 A Docker Compose file and a collection of convenience scripts to easily setup a seedbox on top of Docker
 
+![screenshot](https://raw.githubusercontent.com/harindaka/seedbox/61d4aed33a6f73f0f8fc69d55eb5a5f20ecc30c1/images/Seedbox.png)
+
 ## Features
 1. Download torrents with [Transmission](https://transmissionbt.com/)'s [Combustion web interface](https://github.com/Secretmapper/combustion)
 2. Stream downloaded media with [Jellyfin](https://jellyfin.org/)
