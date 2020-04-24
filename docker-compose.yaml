@@ -26,7 +26,7 @@ services:
       - PUID=${g_uid}
       - PGID=${g_gid}
       - TZ=Europe/London
-      - TRANSMISSION_WEB_HOME=/combustion-release/
+      - TRANSMISSION_WEB_HOME=/transmission-web-control/
     volumes:
       - ${g_transmission_config_dir}:/config
       - ${g_transmission_downloads_dir}:/downloads
