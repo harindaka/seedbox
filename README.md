@@ -20,8 +20,8 @@ Tested on Ubuntu 18.04. Should work on other x64 platforms (Windows, MacOS, etc.
 3. A bash compatible shell to run the included convenience scripts (e.g. via [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10))
 
 ## Setting Up
-1. Download and extract the latest package from [Releases](https://github.com/harindaka/seedbox/releases)
-2. Navigate into the extracted folder 
+1. Download and extract the latest release from [Releases](https://github.com/harindaka/seedbox/releases) or clone this repository
+2. Navigate into the extracted/cloned folder 
 3. Locate and open the file `globals.sh` and set the basic auth credentials for securing the seedbox services under the variable declarations `g_username` and `g_password`
 4. Run the command `./seedbox-up.sh` to start the seedbox services
 5. Allow the ports required by the seedbox services in your firewall (Refer next section)
