@@ -5,6 +5,8 @@ set -e
 source ./globals.sh
 
 mkdir -p $g_transmission_config_dir
+cp -n "$g_transmission_settings_template" "$g_transmission_settings" || true
+
 mkdir -p $g_transmission_downloads_dir
 mkdir -p $g_transmission_watch_dir
 
