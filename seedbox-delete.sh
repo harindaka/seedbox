@@ -3,6 +3,6 @@
 set -e
 
 ./seedbox.sh down
-./delete-data.sh
+./data-delete.sh
 
 

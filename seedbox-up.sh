@@ -14,6 +14,7 @@ mkdir -p $g_jellyfin_config_dir
 
 mkdir -p $g_commander_config_dir
 
+./seedbox-secure.sh
 ./seedbox.sh up -d
 
 echo ""

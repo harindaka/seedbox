@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   nginx:
-    image: linuxserver/nginx
+    image: linuxserver/nginx:aa50b7d8-ls79
     container_name: nginx-container
     environment:
       - PUID=${g_uid}
@@ -20,7 +20,7 @@ services:
       - 6080:6080      
     restart: unless-stopped
   transmission:
-    image: linuxserver/transmission
+    image: linuxserver/transmission:2.94-r3-ls50
     container_name: transmission-container
     environment:
       - PUID=${g_uid}
@@ -38,7 +38,7 @@ services:
       - 51413:51413/udp
     restart: unless-stopped
   jellyfin:
-    image: linuxserver/jellyfin
+    image: linuxserver/jellyfin:20200408-ls64
     container_name: jellyfin-container
     environment:
       - PUID=${g_uid}
@@ -52,7 +52,7 @@ services:
       - 8096
     restart: unless-stopped
   commander:
-    image: coderaiser/cloudcmd
+    image: coderaiser/cloudcmd:14.3.10-alpine
     container_name: commander-container
     working_dir: /mnt/fs
     volumes:

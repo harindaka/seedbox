@@ -12,7 +12,7 @@ A Docker Compose file and a collection of convenience scripts to easily setup a 
 5. All services secured with configurable basic auth credentials
 
 ## Platform Support
-Tested on Ubuntu 18.04. Should work on any platform (Windows, MacOS, etc.) with Docker and Docker Compose installed.
+Tested on Ubuntu 18.04. Should work on other x64 platforms (Windows, MacOS, etc.) with Docker and Docker Compose installed.
 
 ## Prerequisites
 1. [Docker](https://docs.docker.com/get-docker/)
@@ -20,13 +20,12 @@ Tested on Ubuntu 18.04. Should work on any platform (Windows, MacOS, etc.) with 
 3. A bash compatible shell to run the included convenience scripts (e.g. via [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10))
 
 ## Setting Up
-1. Clone this repo
-2. `cd seedbox`
+1. Download and extract the latest package from [Releases](https://github.com/harindaka/seedbox/releases)
+2. Navigate into the extracted folder 
 3. Locate and open the file `globals.sh` and set the basic auth credentials for securing the seedbox services under the variable declarations `g_username` and `g_password`
-4. Run the command `./seedbox-secure.sh` to update the seedbox with the credentials entered in the previous step.
-5. Run the command `./seedbox-up.sh` to start the seedbox services
-6. Allow the ports required by the seedbox services in your firewall (Refer next section)
-7. Access the Seedbox menu via port 80
+4. Run the command `./seedbox-up.sh` to start the seedbox services
+5. Allow the ports required by the seedbox services in your firewall (Refer next section)
+6. Access the Seedbox menu via port 80
 
 ## Default Ports
 Seedbox requires the following ports to be open. Port numbers mentioned below are their default values. If you customized the ports, use those values instead
